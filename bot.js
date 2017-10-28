@@ -19,12 +19,34 @@ $(document).ready(function() {
 		}
 
 		$.ajax({
-			url : 'https://api.wolframalpha.com/v2/query?input=' + queryString + '&format=image,plaintext&output=JSON&appid=Q4WPE9-25JW66UKQV',
+			url : 'https://api.wolframalpha.com/v2/query?input=' + queryString + '&format=html,image,plaintext&output=JSON&appid=Q4WPE9-25JW66UKQV',
 			type : 'GET',
 			dataType : 'jsonp',
 			success : function(data) {
-				var StringOutput = data.queryresult.pods[1].subpods[0].plaintext;
-				$("#list").append('<li> <div class="jumbotron"><h3><b> Gags:&nbsp</b><br><div class="row" style="width:100%;margin-top:10%;height:75%;"><ul style="list-style:none;">' + StringOutput + '</ul></div></div></li>').fadeIn(2000);
+				var StringOutput = "", imgLink = "";
+				$("#result").empty();
+				for(var j=0;j<data.queryresult.pods.length;j++) {
+					// console.log(data.queryresult.pods[j].title);
+					// if(data.queryresult.pods[j].title == "Image") {
+					// 	imgLink = data.queryresult.pods[j].subpods[0].img.src;
+					// 	break;
+					// }
+
+					$("#result").append(data.queryresult.pods[j].markup.data);
+				}
+				
+				//alert(imgLink);
+				// if(data.queryresult.pods[1].subpods[0].plaintext == "") {
+				// 	StringOutput = data.queryresult.pods[0].subpods[0].plaintext;
+				// 	$("#list").append('<li> <div class="jumbotron"><h3><b> Gags:&nbsp</b><div class="row" style="width:100%;height:75%;margin-top:3%;"><ul style="list-style:none;">' + StringOutput + '</ul></div></div></li>').fadeIn(2000);
+				// }
+				// else {
+				// 	StringOutput = data.queryresult.pods[1].subpods[0].plaintext;
+				// 	$("#list").append('<li> <div class="jumbotron"><h3><b> Gags:&nbsp</b><div class="row" style="width:100%;height:75%;margin-top:3%;"><ul style="list-style:none;">' + StringOutput + '</ul></div></div></li>').fadeIn(2000);
+				// 	//$("#list").append('<li> <div class="jumbotron"><h3><b> Gags:&nbsp</b><div class="row" style="width:100%;height:75%;margin-top:3%;"><ul style="list-style:none;"><img src=' + imgLink + '></ul></div></div></li>').fadeIn(2000);
+				// }
+				
+				
 			}
 		});
 
