@@ -76,9 +76,45 @@ function sendFileToCloudVision (content) {
  * Displays the results.
  */
 function displayJSON (data) {
-  var contents = JSON.stringify(data, null, 4);
-  $('#result').text(contents);
-  $("#puf").hide();
+  var contents = data.responses[0].textAnnotations[0].description;
+//  console.log(contents);
+
+
+    var search = contents.split(" ");
+    var stringArray = new Array();
+    var queryString = " ";
+    for(var i = 0; i < search.length; i++){
+      stringArray.push(search[i]);
+      if(search[i] == '+') {
+        search[i] = '%2B';
+      }
+      if(search[i] == '%') {
+        search[i] = '%25';
+      }
+      if(i != search.length - 1)
+        queryString = queryString + search[i] + "+";
+      else 
+        queryString = queryString + search[i];
+    }
+
+    $.ajax({
+      url : 'https://api.wolframalpha.com/v2/query?input=' + queryString + '&format=html,image,plaintext&output=JSON&appid=Q4WPE9-25JW66UKQV',
+      type : 'GET',
+      dataType : 'jsonp',
+      success : function(data) {
+        //console.log(data);
+        var StringOutput = "", imgLink = "";
+        //pageRedirect();
+        $("#result").empty();
+        for(var j=0;j<data.queryresult.pods.length;j++) {
+
+          $("#result").append(data.queryresult.pods[j].markup.data);
+          window.scrollBy(0, 100);
+          $("#puf").hide();
+        }
+      }
+    });
+
   var evt = new Event('results-displayed');
   evt.results = contents;
   document.dispatchEvent(evt);
