@@ -56,7 +56,7 @@ function sendFileToCloudVision (content) {
         content: content
       },
       features: [{
-        type: "TEXT_DETECTION",
+        type: "DOCUMENT_TEXT_DETECTION",
         maxResults: 200
       }]
     }]
