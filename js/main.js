@@ -115,7 +115,7 @@ function displayJSON (data) {
         for(var j=0;j<data.queryresult.pods.length;j++) {
 
           $("#result").append(data.queryresult.pods[j].markup.data);
-          window.scrollBy(0, 300);
+          window.scrollBy(0, 100);
           $("#puf").hide();
         }
       }

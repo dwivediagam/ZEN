@@ -3,6 +3,8 @@
 <head>
 	<title>Zen</title>
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	
+	<link rel="stylesheet" type="text/css" href="particle.css">
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	<link rel="shortcut icon" href="favicon.png" type="image/x-icon">
 	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
@@ -37,6 +39,7 @@
 			font-size: 85px;
 			text-align: center;
 			padding-top: 16%;
+			text-shadow: 4px 4px 2px rgba(150, 150, 149, 1);
 			
 		}
 		#formContent {
@@ -137,6 +140,7 @@
 	</style>
 </head>
 <body>
+	<div id="particles-js" style="z-index: -1;"></div>
 	<div class="container">
 		<div class="row" id="mmm">
 			<h1 id="main">Zen<sub style="font-size: 12px;">from primes to prime minister</sub></h1>
@@ -144,7 +148,7 @@
 				<form method="POST" id="form" >
 					<div class="row">
 						<div class="col-lg-2 col-sm-12 col-xs-12"></div>
-						<div class="col-lg-8 col-sm-12 col-xs-12" style="margin-left: -20%;">
+						<div class="col-lg-8 col-sm-12 col-xs-12" style="margin-left: -23%;">
 							<input type="text"  class="form-control" name="message" placeholder="Ask me something..." id="msg">
 						</div>
 						<!-- <div class="col-lg-2 col-sm-12 col-xs-12"></div> -->
@@ -193,8 +197,12 @@
 		</div>
 	</div>
 
+	
 	<script type="text/javascript" src="js/bot.js"></script>
 	<script type="text/javascript" src="js/voice.js"></script>
+	<script src='https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js'></script>
+	<script src='https://threejs.org/examples/js/libs/stats.min.js'></script>
+	<script type="text/javascript" src="js/particle.js"></script>
 	<script src='https://code.responsivevoice.org/responsivevoice.js'></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
