@@ -1,4 +1,4 @@
-# ZEN
+# ZEN - Team Mojo Jojo
 
 ![HomePage](images/homepage.png)
 
