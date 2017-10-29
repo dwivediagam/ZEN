@@ -5,18 +5,24 @@ $(document).ready(function() {
 		$("#puf").show();
 		
 			var search = $("#msg").val();
+			//console.log(search);
+			search = encodeURIComponent(search);
+			//console.log(search);
+			
 		//window.scrollBy(0, 500);
 		search = search.split(" ");
 		var stringArray = new Array();
 		var queryString = " ";
 		for(var i = 0; i < search.length; i++){
 			stringArray.push(search[i]);
-			if(search[i] == '+') {
-				search[i] = '%2B';
-			}
-			if(search[i] == '%') {
-				search[i] = '%25';
-			}
+			search[i].replace(/\+/g,"%2B");
+      		search[i].replace("%","%25");
+			// if(search[i] == '+') {
+			// 	search[i] = '%2B';
+			// }
+			// if(search[i] == '%') {
+			// 	search[i] = '%25';
+			// }
 			if(i != search.length - 1)
 				queryString = queryString + search[i] + "+";
 			else 

@@ -77,20 +77,24 @@ function sendFileToCloudVision (content) {
  */
 function displayJSON (data) {
   var contents = data.responses[0].textAnnotations[0].description;
-//  console.log(contents);
-
-
+    contents = encodeURIComponent(contents);
     var search = contents.split(" ");
     var stringArray = new Array();
     var queryString = " ";
     for(var i = 0; i < search.length; i++){
       stringArray.push(search[i]);
-      if(search[i] == '+') {
-        search[i] = '%2B';
-      }
-      if(search[i] == '%') {
-        search[i] = '%25';
-      }
+
+      search[i].replace("+","%2B");
+      search[i].replace("%","%25");
+
+      console.log(search[i]);
+
+      // if(search[i] == '+') {
+      //   search[i] = '%2B';
+      // }
+      // if(search[i] == '%') {
+      //   search[i] = '%25';
+      // }
       if(i != search.length - 1)
         queryString = queryString + search[i] + "+";
       else 
