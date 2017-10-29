@@ -7,6 +7,9 @@
 ![14p2](images/14p2.jpg) ![14](images/14.png)
 
 ## Mathematics goes lot easier..
+
+![eq](images/eq.jpg) ![eq](images/eq1.png)
+
 ![w](images/int.jpg) ![w](images/intans.png)
 
 ![4p5](images/4p5.jpg) ![4](images/4.png)
