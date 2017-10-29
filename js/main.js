@@ -16,6 +16,7 @@
 var CV_URL = 'https://vision.googleapis.com/v1/images:annotate?key=' + window.apiKey;
 
 $(function () {
+  $("#puf").hide();
   $('#fileform').on('submit', uploadFiles);
 });
 
@@ -61,7 +62,7 @@ function sendFileToCloudVision (content) {
     }]
   };
 
-  $('#result').text('Loading...');
+  $("#puf").show();
   $.post({
     url: CV_URL,
     data: JSON.stringify(request),
@@ -77,6 +78,7 @@ function sendFileToCloudVision (content) {
 function displayJSON (data) {
   var contents = JSON.stringify(data, null, 4);
   $('#result').text(contents);
+  $("#puf").hide();
   var evt = new Event('results-displayed');
   evt.results = contents;
   document.dispatchEvent(evt);
