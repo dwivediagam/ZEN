@@ -149,7 +149,7 @@
 						</div>
 						<!-- <div class="col-lg-2 col-sm-12 col-xs-12"></div> -->
 						<div class="col-md-2 col-sm-12 col-xs-12">
-							<button class="btn btn-default" id="buttons">Send</button><br>
+							<button class="btn btn-default" id="buttons">ASK</button><br>
 						</div>
 					</div>
 				</form>
@@ -161,42 +161,47 @@
 			<div class="col-lg-2" style="text-align: center;margin-left: -2%;"></div>
 			
 
-		<i data-toggle="modal" onclick="document.getElementById('id01').style.display='block'" class="fa fa-camera" aria-hidden="true" id="camera" style="color: black;font-size: 20px;text-align: center;"></i>&nbsp;&nbsp;&nbsp;
-		&nbsp;&nbsp;&nbsp;<i class="fa fa-microphone" aria-hidden="true" onclick="startDictation()" id="mic" style="color: black;font-size: 20px;text-align: center;padding-right: 10%;"></i>
-		<div id="id01" class="modal">
+			<i data-toggle="modal" onclick="document.getElementById('id01').style.display='block'" class="fa fa-camera" aria-hidden="true" id="camera" style="color: black;font-size: 20px;text-align: center;" data-toggle="tooltip" data-placement="bottom" title="Upload a picture"></i>&nbsp;&nbsp;&nbsp;
+			&nbsp;&nbsp;&nbsp;<i class="fa fa-microphone" aria-hidden="true" onclick="startDictation()" id="mic" style="color: black;font-size: 20px;text-align: center;padding-right: 10%;"></i>
+			<div id="id01" class="modal">
 
-			<form class="modal-content animate" id="fileform" action="">
+				<form class="modal-content animate" id="fileform" action="">
 
-				<div class="container">
+					<div class="container">
 
-					<input type="file" name="fileField" style="dislpay: none;z-index: 10;margin-left: 23%;padding-top: 2%;text-align: center;" /><i class="fa fa-plus-circle" aria-hidden="true" style="color: #f0f0f0;font-size: 120px;text-align: center;padding-top: 2%;margin-left: 23%;z-index: 5;"></i><br>
+						<input type="file" name="fileField" style="dislpay: none;z-index: 10;margin-left: 20%;padding-top: 2%;text-align: center;" /><i class="fa fa-plus-circle" aria-hidden="true" style="color: #f0f0f0;font-size: 120px;text-align: center;padding-top: 2%;margin-left: 20%;z-index: 5;"></i><br>
 
-					
-				</div>
 
-				<div class="container" style="padding-top: 10%;margin-left: 31%;padding-bottom: 10%;">
-					<button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancel btn btn btn-default" style="width: 100px;height: 50px;font-size: 20px;">Cancel</button>
-					<input type="submit" name="submit" class="btn btn-success" value="SUBMIT" style="width: 100px;height: 50px;font-size: 20px;">
-				</div>
-			</form>
+					</div>
+
+					<div class="container" style="padding-top: 10%;margin-left: 31%;padding-bottom: 10%;">
+						<button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancel btn btn btn-default" style="width: 100px;height: 50px;font-size: 20px;">Cancel</button>
+						<input type="submit" name="submit" class="btn btn-success" value="SUBMIT" style="width: 100px;height: 50px;font-size: 20px;">
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="col-lg-4"></div>
+	</div>
+	<br>
+	<img src="Spinner.svg" style="margin-left: 48%;margin-top: 5%;" id="puf">
+	<div class="row" style="width: 80%;margin-left: 20%;padding-top: 20%;">
+		<div class="col-lg-12" style="width: 80%;">
+			<div id="result" style="color: black;">
+
+			</div>
 		</div>
 	</div>
-	<div class="col-lg-4"></div>
-</div>
-<br>
-<img src="Spinner.svg" style="margin-left: 48%;margin-top: 5%;" id="puf">
-<div class="row" style="width: 80%;margin-left: 20%;padding-top: 20%;">
-	<div class="col-lg-12" style="width: 80%;">
-		<div id="result" style="color: black;">
 
-		</div>
-	</div>
-</div>
-
-<script type="text/javascript" src="js/bot.js"></script>
-<script type="text/javascript" src="js/voice.js"></script>
-<script src='https://code.responsivevoice.org/responsivevoice.js'></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/bot.js"></script>
+	<script type="text/javascript" src="js/voice.js"></script>
+	<script src='https://code.responsivevoice.org/responsivevoice.js'></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+		$(function () {
+			$('[data-toggle="tooltip"]').tooltip()
+		})
+	</script>
 </body>
 </html>
