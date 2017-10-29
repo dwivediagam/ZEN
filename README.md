@@ -1,6 +1,6 @@
 # ZEN - Team Mojo Jojo
 
-![HomePage](images/homepage.png)
+![HomePage](images/hom1.png)
 
 ## Some of the pictures we tested out engine on...
 
