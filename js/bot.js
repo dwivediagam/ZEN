@@ -5,9 +5,10 @@ $(document).ready(function() {
 		$("#puf").show();
 		
 			var search = $("#msg").val();
-			//console.log(search);
+
+			console.log(search);
 			search = encodeURIComponent(search);
-			//console.log(search);
+			console.log(search);
 			
 		//window.scrollBy(0, 500);
 		search = search.split(" ");
