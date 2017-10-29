@@ -76,6 +76,7 @@ function sendFileToCloudVision (content) {
  * Displays the results.
  */
 function displayJSON (data) {
+  console.log(data);
   var contents = data.responses[0].textAnnotations[0].description;
 
   console.log(contents);
