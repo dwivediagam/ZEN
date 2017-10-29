@@ -19,4 +19,11 @@
 ![w](images/newton2.jpg) ![w](images/newtonans.png)
 
 
+### Team Members:
+
+- [Agam Dwivedi](https://github.com/agam98)
+- [Arindam Das Modak](https://github.com/arindam-modak)
+- [Gagan Ganpathy](https://github.com/CodHek)
+- [Pradeep Gangwar](https://github.com/pradeepgangwar)
+
 
