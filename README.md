@@ -4,7 +4,7 @@
 
 ## Some of the pictures we tested out engine on...
 
-![14p2](images/14p2.jpg) ![14](images/14.png)
+![14p2](images/new1.jpg) ![14](images/new.png)
 
 ## Mathematics goes lot easier..
 
