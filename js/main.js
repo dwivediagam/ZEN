@@ -68,7 +68,7 @@ function sendFileToCloudVision (content) {
     data: JSON.stringify(request),
     contentType: 'application/json'
   }).fail(function (jqXHR, textStatus, errorThrown) {
-    $('#result').text('ERRORS: ' + textStatus + ' ' + errorThrown);
+    $('#result').append('<h2 style="text-align:centre;font-size:40px;color:black;font-family: 'Saira', sans-serif;">TEXT NOT FOUND :(</h2>');
   }).done(displayJSON);
 }
 
