@@ -25,7 +25,7 @@ $(function () {
  */
 function uploadFiles (event) {
   event.preventDefault(); // Prevent the default form post
-
+	document.getElementById('id01').style.display='none';
   // Grab the file and asynchronously convert to base64.
   var file = $('#fileform [name=fileField]')[0].files[0];
   var reader = new FileReader();
