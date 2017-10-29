@@ -14,7 +14,7 @@ function startDictation() {
         document.getElementById('msg').value
                                  = e.results[0][0].transcript;
         recognition.stop();
-        document.getElementById('#buttons').click();
+        document.getElementById('form').submit();
       };
 
       recognition.onerror = function(e) {
