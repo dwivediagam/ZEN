@@ -10,4 +10,4 @@
 
 ![w](images/wa.jpg) ![w](images/w.png) 
 
-
+![w](images/newton2.jpg) ![w](images/newtonans.png)
