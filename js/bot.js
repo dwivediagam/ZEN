@@ -1,10 +1,15 @@
 $(document).ready(function() {
+	$("#puf").hide();
+
 	$("#form").submit(function(e){
-		var search = $("#msg").val();
+		$("#puf").show();
+		
+			var search = $("#msg").val();
+		//window.scrollBy(0, 500);
 		search = search.split(" ");
 		var stringArray = new Array();
 		var queryString = " ";
-		for(var i =0; i < search.length; i++){
+		for(var i = 0; i < search.length; i++){
 			stringArray.push(search[i]);
 			if(search[i] == '+') {
 				search[i] = '%2B';
@@ -24,16 +29,21 @@ $(document).ready(function() {
 			dataType : 'jsonp',
 			success : function(data) {
 				var StringOutput = "", imgLink = "";
+				//pageRedirect();
 				$("#result").empty();
 				for(var j=0;j<data.queryresult.pods.length;j++) {
 
 					$("#result").append(data.queryresult.pods[j].markup.data);
-				}
-				
-				
-				
+					window.scrollBy(0, 150);
+					$("#puf").hide();
+				}	
 			}
 		});
+
+		function pageRedirect() {
+			window.location.href = "display.html";
+		}
+
 		e.preventDefault();
 	});
 });
