@@ -9,7 +9,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Saira" rel="stylesheet">
 	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.js"></script>
 	<script type="text/javascript" src="js/key.js"></script>
-  	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
 	<script>
 		var modal = document.getElementById('id01');
 		window.onclick = function(event) {
@@ -50,104 +50,107 @@
 			height: 70px;
 		}
 		.cancelbtn {
-		width: auto;
-		padding: 10px 18px;
-		background-color: #f44336;
-	}
-	/* Center the image and position the close button */
-	.imgcontainer {
-		text-align: center;
-		margin: 20px 0 10px 0;
-		position: relative;
-	}
-	img.avatar {
-		width: 30%;
-		border-radius: 50%;
-		height: 100px;
-		width:100px;
-	}
-	.container {
-		padding: 16px;
-		padding-left: 20px;
-	}
-	span.psw {
-		float: right;
-		padding-top: 16px;
-	}
-	/* The Modal (background) */
-	.modal {
-		display: none; /* Hidden by default */
-		position: fixed; /* Stay in place */
-		z-index: 1; /* Sit on top */
-		left: 0;
-		top: 0;
-		width: 100%; /* Full width */
-		height: 100%; /* Full height */
-		overflow: auto; /* Enable scroll if needed */
-		background-color: rgb(0,0,0); /* Fallback color */
-		background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-		padding-top: 60px;
-	}
-	/* Modal Content/Box */
-	.modal-content {
-		background-color: #fefefe;
-		margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
-		border: 1px solid #888;
-		width: 90%; /* Could be more or less, depending on screen size */
-	}
-	/* The Close Button (x) */
-	.close {
-		position: absolute;
-		right: 25px;
-		top: 0;
-		color: #000;
-		font-size: 35px;
-		font-weight: bold;
-	}
-	.close:hover,
-	.close:focus {
-		color: red;
-		cursor: pointer;
-	}
-	/* Add Zoom Animation */
-	.animate {
-		-webkit-animation: animatezoom 0.6s;
-		animation: animatezoom 0.6s
-	}
-	@-webkit-keyframes animatezoom {
-		from {-webkit-transform: scale(0)} 
-		to {-webkit-transform: scale(1)}
-	}
-		
-	@keyframes animatezoom {
-		from {transform: scale(0)} 
-		to {transform: scale(1)}
-	}
-	/* Change styles for span and cancel button on extra small screens */
-	@media screen and (max-width: 300px) {
+			width: auto;
+			padding: 10px 18px;
+			background-color: #f44336;
+		}
+		/* Center the image and position the close button */
+		.imgcontainer {
+			text-align: center;
+			margin: 20px 0 10px 0;
+			position: relative;
+		}
+		img.avatar {
+			width: 30%;
+			border-radius: 50%;
+			height: 100px;
+			width:100px;
+		}
+		.container {
+			padding: 16px;
+			padding-left: 20px;
+		}
 		span.psw {
-		   display: block;
-		   float: none;
+			float: right;
+			padding-top: 16px;
 		}
-		.cancelbtn {
-		   width: 100%;
+		/* The Modal (background) */
+		.modal {
+			display: none; /* Hidden by default */
+			position: fixed; /* Stay in place */
+			z-index: 1; /* Sit on top */
+			left: 0;
+			top: 0;
+			width: 100%; /* Full width */
+			height: 100%; /* Full height */
+			overflow: auto; /* Enable scroll if needed */
+			background-color: rgb(0,0,0); /* Fallback color */
+			background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+			padding-top: 60px;
 		}
-	}
+		/* Modal Content/Box */
+		.modal-content {
+			background-color: #fefefe;
+			margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+			border: 1px solid #888;
+			width: 45%; /* Could be more or less, depending on screen size */
+			height: 60%;
+		}
+		/* The Close Button (x) */
+		.close {
+			position: absolute;
+			right: 25px;
+			top: 0;
+			color: #000;
+			font-size: 35px;
+			font-weight: bold;
+		}
+		.close:hover,
+		.close:focus {
+			color: red;
+			cursor: pointer;
+		}
+		/* Add Zoom Animation */
+		.animate {
+			-webkit-animation: animatezoom 0.6s;
+			animation: animatezoom 0.6s
+		}
+		@-webkit-keyframes animatezoom {
+			from {-webkit-transform: scale(0)} 
+			to {-webkit-transform: scale(1)}
+		}
+		
+		@keyframes animatezoom {
+			from {transform: scale(0)} 
+			to {transform: scale(1)}
+		}
+		/* Change styles for span and cancel button on extra small screens */
+		@media screen and (max-width: 300px) {
+			span.psw {
+				display: block;
+				float: none;
+			}
+			.cancelbtn {
+				width: 100%;
+			}
+		}
 	</style>
 </head>
 <body>
 	<div class="container">
 		<div class="row" id="mmm">
-			<h1 id="main">Zen</h1>
+			<h1 id="main">Zen<sub style="font-size: 12px;">from primes to prime minister</sub></h1>
 			<div id="formContent">
 				<form method="POST" id="form" >
 					<div class="row">
-						<div class="col-md-6 col-sm-12 col-xs-12">
-							<input type="text"  class="form-control" name="message" placeholder="Type a message..." id="msg">
+						<div class="col-lg-2 col-sm-12 col-xs-12"></div>
+						<div class="col-lg-8 col-sm-12 col-xs-12" style="margin-left: -20%;">
+							<input type="text"  class="form-control" name="message" placeholder="Ask me something..." id="msg">
 						</div>
-						<div class="col-md-2 col-sm-12 col-xs-12">
+						<div class="col-lg-2 col-sm-12 col-xs-12"></div>
+						<!-- <div class="col-md-2 col-sm-12 col-xs-12">
 							<button class="btn btn-default" id="buttons">Send</button><br>
-						</div>
+						</div> -->
 					</div>
 				</form>
 			</div>
@@ -157,46 +160,43 @@
 			<div class="col-lg-4"></div>
 			<div class="col-lg-2" style="text-align: center;margin-left: -2%;"></div>
 			
-			<!--  <form id="fileform" action="">
-			<input type="file" name="fileField"  style="opacity: 0.0; position: absolute; top:0; left: 0; bottom: 0; right:0; width: 100%; height:100%;"/>
-			</form> -->
-			
-			<i data-toggle="modal" onclick="document.getElementById('id01').style.display='block'" class="fa fa-camera" aria-hidden="true" id="camera" style="color: black;font-size: 20px;text-align: center;"></i>&nbsp;&nbsp;&nbsp;
-			&nbsp;&nbsp;&nbsp;<i class="fa fa-microphone" aria-hidden="true" onclick="startDictation()" id="mic" style="color: black;font-size: 20px;text-align: center;padding-right: 10%;"></i>
-						<div id="id01" class="modal">
-							  
-							  <form class="modal-content animate" id="fileform" action="">
-								
-								<div class="container">
-								  
-								  <input type="file" name="fileField"><br>
-								  
-								  <input type="submit" name="submit" value="Sumbit">
-								</div>
 
-								<div class="container" style="background-color:#f1f1f1">
-								  <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-								  
-								</div>
-							</form>
-						</div>
-		</div>
-		<div class="col-lg-4"></div>
-	</div>
-	<br>
-		<img src="Spinner.svg" style="margin-left: 48%;margin-top: 5%;" id="puf">
-		<div class="row" style="width: 80%;margin-left: 20%;padding-top: 20%;">
-			<div class="col-lg-12" style="width: 80%;">
-				<div id="result" style="color: black;">
+		<i data-toggle="modal" onclick="document.getElementById('id01').style.display='block'" class="fa fa-camera" aria-hidden="true" id="camera" style="color: black;font-size: 20px;text-align: center;"></i>&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;<i class="fa fa-microphone" aria-hidden="true" onclick="startDictation()" id="mic" style="color: black;font-size: 20px;text-align: center;padding-right: 10%;"></i>
+		<div id="id01" class="modal">
 
+			<form class="modal-content animate" id="fileform" action="">
+
+				<div class="container">
+
+					<input type="file" name="fileField" style="dislpay: none;z-index: 10;margin-left: 23%;padding-top: 2%;text-align: center;" /><i class="fa fa-plus-circle" aria-hidden="true" style="color: #f0f0f0;font-size: 120px;text-align: center;padding-top: 2%;margin-left: 23%;z-index: 5;"></i><br>
+
+					
 				</div>
-			</div>
-		</div>
 
-	<script type="text/javascript" src="js/bot.js"></script>
-	<script type="text/javascript" src="js/voice.js"></script>
-	<script src='https://code.responsivevoice.org/responsivevoice.js'></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+				<div class="container" style="padding-top: 10%;margin-left: 31%;padding-bottom: 10%;">
+					<button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancel btn btn btn-default" style="width: 100px;height: 50px;font-size: 20px;">Cancel</button>
+					<input type="submit" name="submit" class="btn btn-success" value="SUBMIT" style="width: 100px;height: 50px;font-size: 20px;">
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="col-lg-4"></div>
+</div>
+<br>
+<img src="Spinner.svg" style="margin-left: 48%;margin-top: 5%;" id="puf">
+<div class="row" style="width: 80%;margin-left: 20%;padding-top: 20%;">
+	<div class="col-lg-12" style="width: 80%;">
+		<div id="result" style="color: black;">
+
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript" src="js/bot.js"></script>
+<script type="text/javascript" src="js/voice.js"></script>
+<script src='https://code.responsivevoice.org/responsivevoice.js'></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>
 </html>
