@@ -1,4 +1,7 @@
 # ZEN - Team Mojo Jojo
+### [Project presentation](https://docs.google.com/presentation/d/1THQ_dsQpNMnZycidDk8GqawJhiITGEc5FTzZ_Ah6ifE/edit?usp=sharing)
+
+___
 
 ![HomePage](images/hom1.png)
 
